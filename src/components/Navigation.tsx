@@ -36,8 +36,8 @@ export const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <span className="text-2xl font-bold">
-              <span className="text-white">Digital</span>
-              <span className="gradient-text">Dreams</span>
+              <span className="text-white"></span>
+              <span className="text-white">Webicly</span>
             </span>
           </div>
 
