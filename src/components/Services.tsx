@@ -63,9 +63,9 @@ export const Services = () => {
               className="group relative"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-xl blur-xl transition-all duration-500`} />
+              <div className={`absolute inset-0 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-xl blur-xl transition-all duration-500`} />
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-white/20 transition-all duration-300 h-full hover:bg-white/[0.07]">
-                <div className={`inline-flex p-4 rounded-lg bg-gradient-to-br ${service.gradient} mb-6 shadow-lg`}>
+                <div className={`inline-flex p-4 rounded-lg bg-linear-to-br ${service.gradient} mb-6 shadow-lg`}>
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>

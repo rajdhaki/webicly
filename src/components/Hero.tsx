@@ -21,7 +21,7 @@ export const Hero = () => {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_80%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[64px_64px] mask-[radial-gradient(ellipse_at_center,black_30%,transparent_80%)]" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
@@ -32,7 +32,7 @@ export const Hero = () => {
 
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
           <span className="block text-white mb-3">Transform Your Business with</span>
-          <span className="gradient-text bg-linear-to-r from-primary via-secondary to-accent bg-[length:300%_300%] animate-gradient-shift">
+          <span className="gradient-text bg-linear-to-r from-primary via-secondary to-accent bg-size-[300%_300%] animate-gradient-shift">
             Next-Gen Digital Solutions
           </span>
         </h1>
