@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,14 +76,14 @@ export const Navigation = () => {
         <div className="md:hidden bg-[#0a0118]/98 backdrop-blur-lg border-t border-white/10">
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="block text-white/80 hover:text-white transition-colors text-base font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <Button
               size="sm"

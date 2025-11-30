@@ -54,13 +54,13 @@ export const Hero = () => {
             <div className="absolute inset-0 bg-linear-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
           </Button>
           
-          <Button 
+          {/* <Button 
             size="lg" 
             variant="outline"
             className="border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white hover:text-white text-base px-10 py-6 rounded-lg font-semibold hover:border-white/30"
           >
             View Case Studies
-          </Button>
+          </Button> */}
         </div>
 
         {/* Trust Indicators */}
