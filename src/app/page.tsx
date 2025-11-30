@@ -10,12 +10,10 @@ import Image from "next/image";
 export default function Home() {
   return (
 <>
-<Navigation/>
 <Hero/>
 <Services/>
 <Testimonials/>
 <CTA/>
-<Footer/>
 </>
   );
 }
