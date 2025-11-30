@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react";
-import { ParticleBackground } from "@/components/ParticleBackground";
 import { Badge } from "./ui/badge";
 import { Card, CardContent } from "./ui/card";
 import { ExternalLink, Github } from "lucide-react";
@@ -34,36 +33,36 @@ const projects = [
     tags: ["Vue.js", "D3.js", "Python"],
     metrics: { transactions: "10M+", accuracy: "99.9%", speed: "< 100ms" }
   },
-  {
-    id: 4,
-    title: "Smart Home System",
-    category: "IoT",
-    description: "Integrated smart home automation with AI-powered energy optimization",
-    image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80",
-    tags: ["IoT", "Machine Learning", "AWS"],
-    metrics: { devices: "1M+", savings: "40%", homes: "25K+" }
-  },
-  {
-    id: 5,
-    title: "EdTech Platform",
-    category: "Education",
-    description: "Interactive learning platform with adaptive curriculum and progress tracking",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
-    tags: ["React", "GraphQL", "PostgreSQL"],
-    metrics: { students: "200K+", courses: "5K+", completion: "85%" }
-  },
-  {
-    id: 6,
-    title: "Social Media Analytics",
-    category: "Marketing",
-    description: "Comprehensive social media analytics and campaign management platform",
-    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800&q=80",
-    tags: ["Angular", "TensorFlow", "Redis"],
-    metrics: { brands: "1K+", insights: "50M+", roi: "+300%" }
-  }
+  // {
+  //   id: 4,
+  //   title: "Smart Home System",
+  //   category: "IoT",
+  //   description: "Integrated smart home automation with AI-powered energy optimization",
+  //   image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80",
+  //   tags: ["IoT", "Machine Learning", "AWS"],
+  //   metrics: { devices: "1M+", savings: "40%", homes: "25K+" }
+  // },
+  // {
+  //   id: 5,
+  //   title: "EdTech Platform",
+  //   category: "Education",
+  //   description: "Interactive learning platform with adaptive curriculum and progress tracking",
+  //   image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
+  //   tags: ["React", "GraphQL", "PostgreSQL"],
+  //   metrics: { students: "200K+", courses: "5K+", completion: "85%" }
+  // },
+  // {
+  //   id: 6,
+  //   title: "Social Media Analytics",
+  //   category: "Marketing",
+  //   description: "Comprehensive social media analytics and campaign management platform",
+  //   image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800&q=80",
+  //   tags: ["Angular", "TensorFlow", "Redis"],
+  //   metrics: { brands: "1K+", insights: "50M+", roi: "+300%" }
+  // }
 ];
 
-const categories = ["All", "Web Development", "Mobile Development", "Data Analytics", "IoT", "Education", "Marketing"];
+const categories = ["All", "Web Development", "Mobile Development", "Data Analytics", "Education"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -75,7 +74,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen relative overflow-hidden animate-in fade-in zoom-in duration-500">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 bg-gradient-to-b from-[#0a0118] to-[#0f0524]">
+      <section className="relative pt-32 pb-20 px-4 bg-linear-to-b from-[#0a0118] to-[#0f0524]">
         {/* Gradient orbs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
         <div className="absolute top-20 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
@@ -87,7 +86,7 @@ const Portfolio = () => {
 
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
             Our{" "}
-            <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Portfolio
             </span>
           </h1>
@@ -120,7 +119,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="px-4 pb-20 relative z-10 bg-gradient-to-b from-[#0f0524] to-[#0a0118]">
+      <section className="px-4 pb-20 relative z-10 bg-linear-to-b from-[#0f0524] to-[#0a0118]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
@@ -134,7 +133,7 @@ const Portfolio = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0118] via-[#0a0118]/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0a0118] via-[#0a0118]/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                   <Badge className="absolute top-4 right-4 bg-black/50 backdrop-blur-md text-white border-white/20">
                     {project.category}
                   </Badge>

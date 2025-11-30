@@ -1,4 +1,4 @@
-import { Code2, Palette, Rocket, Shield, Database, Zap } from "lucide-react";
+import { Code2, Palette, Rocket, Shield, Zap, LayoutGrid } from "lucide-react";
 
 const services = [
   {
@@ -14,7 +14,7 @@ const services = [
     gradient: "from-secondary to-accent",
   },
   {
-    icon: Database,
+    icon: LayoutGrid,
     title: "Custom App Development",
     description: "End-to-end mobile app development using React Native for high-performance iOS and Android applications.",
     gradient: "from-accent to-primary",
