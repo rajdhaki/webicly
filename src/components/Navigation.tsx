@@ -45,13 +45,13 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-white/80 hover:text-white transition-colors text-sm font-medium"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <Button
               size="sm"
