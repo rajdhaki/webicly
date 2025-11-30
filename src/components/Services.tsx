@@ -3,7 +3,7 @@ import { Code2, Palette, Rocket, Shield, Database, Zap } from "lucide-react";
 const services = [
   {
     icon: Code2,
-    title: "Custom Development",
+    title: "Custom Web Development",
     description: "Scalable web applications built with React, Node.js, and modern technologies for optimal performance and security.",
     gradient: "from-primary to-secondary",
   },
@@ -15,10 +15,11 @@ const services = [
   },
   {
     icon: Database,
-    title: "Cloud Solutions",
-    description: "Enterprise cloud architecture on AWS, Azure, and GCP with automated deployment and scaling.",
+    title: "Custom App Development",
+    description: "End-to-end mobile app development using React Native for high-performance iOS and Android applications.",
     gradient: "from-accent to-primary",
   },
+  
   {
     icon: Rocket,
     title: "Digital Transformation",
@@ -27,7 +28,7 @@ const services = [
   },
   {
     icon: Shield,
-    title: "Security & Compliance",
+    title: "Security & Compliance (soon)",
     description: "Enterprise-grade security audits, penetration testing, and compliance management (SOC 2, GDPR, HIPAA).",
     gradient: "from-secondary to-primary",
   },
@@ -41,7 +42,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="relative py-24 px-4 bg-gradient-to-b from-[#0a0118] to-[#0f0524]">
+    <section id="services" className="relative py-24 px-4 bg-linear-to-b from-[#0a0118] to-[#0f0524]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <div className="inline-block mb-4">
@@ -55,7 +56,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((service, index) => (
             <div
               key={index}

@@ -1,10 +1,16 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { ParticleBackground } from "@/components/ParticleBackground";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const Hero = () => {
+
+  const router = useRouter()
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a0118] via-[#0f0524] to-[#1a0b2e] pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-[#0a0118] via-[#0f0524] to-[#1a0b2e] pt-20">
       <ParticleBackground />
       
       {/* Gradient Orbs - More Subtle */}
@@ -26,7 +32,7 @@ export const Hero = () => {
 
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
           <span className="block text-white mb-3">Transform Your Business with</span>
-          <span className="gradient-text bg-gradient-to-r from-primary via-secondary to-accent bg-[length:300%_300%] animate-gradient-shift">
+          <span className="gradient-text bg-linear-to-r from-primary via-secondary to-accent bg-[length:300%_300%] animate-gradient-shift">
             Next-Gen Digital Solutions
           </span>
         </h1>
@@ -38,13 +44,14 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in" style={{ animationDelay: "0.3s" }}>
           <Button 
             size="lg" 
-            className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_40px_rgba(255,71,87,0.4)] transition-all duration-300 text-base px-10 py-6 rounded-lg font-semibold"
+            className="group relative overflow-hidden bg-linear-to-r from-primary to-secondary hover:shadow-[0_0_40px_rgba(255,71,87,0.4)] transition-all duration-300 text-base px-10 py-6 rounded-lg font-semibold"
+          onClick={()=> router.push("/contact")}
           >
             <span className="relative z-10 flex items-center gap-2">
               Start Your Project
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-linear-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
           </Button>
           
           <Button 
@@ -78,12 +85,12 @@ export const Hero = () => {
     { value: "15+", label: "Years Experience", sublabel: "Industry Leadership" },
   ].map((stat, index) => (
     <div key={index} className="relative group">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
+      <div className="absolute inset-0 bg-linear-to-r from-primary/10 to-secondary/10 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
 
       <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-white/20 transition-all hover:bg-white/10">
         
         {/* FIXED GRADIENT TEXT */}
-        <div className="text-4xl md:text-5xl font-bold gradient-text bg-gradient-to-r from-primary via-secondary to-accent bg-300% animate-gradient-shift mb-2">
+        <div className="text-4xl md:text-5xl font-bold gradient-text bg-linear-to-r from-primary via-secondary to-accent bg-300% animate-gradient-shift mb-2">
           {stat.value}
         </div>
 
@@ -97,7 +104,7 @@ export const Hero = () => {
       </div>
 
       {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0118] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-[#0a0118] to-transparent" />
     </section>
   );
 };

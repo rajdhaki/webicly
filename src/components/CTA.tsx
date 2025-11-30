@@ -1,9 +1,15 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const CTA = () => {
+
+  const router = useRouter()
+
   return (
-    <section className="relative py-24 px-4 bg-gradient-to-b from-[#0a0118] to-[#0f0524] overflow-hidden">
+    <section className="relative py-24 px-4 bg-linear-to-b from-[#0a0118] to-[#0f0524] overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[140px] animate-pulse-glow" />
@@ -22,22 +28,23 @@ export const CTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             size="lg" 
-            className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_40px_rgba(255,71,87,0.4)] transition-all duration-300 text-base px-10 py-6 rounded-lg font-semibold"
+            className="group relative overflow-hidden bg-linear-to-r from-primary to-secondary hover:shadow-[0_0_40px_rgba(255,71,87,0.4)] transition-all duration-300 text-base px-10 py-6 rounded-lg font-semibold"
+            onClick={()=> router.push("/contact")}
           >
             <span className="relative z-10 flex items-center gap-2">
               Schedule a Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-linear-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
           </Button>
           
-          <Button 
+          {/* <Button 
             size="lg" 
             variant="outline"
             className="border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white hover:text-white text-base px-10 py-6 rounded-lg font-semibold hover:border-white/30"
           >
             View Pricing
-          </Button>
+          </Button> */}
         </div>
 
         {/* Trust Badge */}

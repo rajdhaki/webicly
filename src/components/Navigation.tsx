@@ -54,7 +54,7 @@ export const Navigation = () => {
             ))}
             <Button
               size="sm"
-              className="bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_30px_rgba(255,71,87,0.4)] transition-all"
+              className="bg-linear-to-r from-primary to-secondary hover:shadow-[0_0_30px_rgba(255,71,87,0.4)] transition-all"
             >
               Get in Touch
             </Button>
@@ -86,7 +86,7 @@ export const Navigation = () => {
             ))}
             <Button
               size="sm"
-              className="w-full bg-gradient-to-r from-primary to-secondary"
+              className="w-full bg-linear-to-r from-primary to-secondary"
             >
               Get in Touch
             </Button>
